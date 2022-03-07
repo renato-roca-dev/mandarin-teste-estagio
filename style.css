@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@1,300;1,700&family=Ubuntu:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* Margin of the page */
+.wrapper{
+    max-width: 1440px;
+    width: 60%;
+    margin: 0 auto;
+}
+/* Header */
+header{
+    height: 250px;
+    background: linear-gradient(90deg, #E9492A 18.68%, #E72357 62.32%)
+}
+#background-header {
+    height: 250px;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: center -5px;
+    background-image: url(./imgs/background-header.svg);
+}
+#header-content {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    align-items: center;
+    height: 250px;
+    z-index: 1;
+    justify-content: space-between;
+}
+#header-texts{
+    text-align: right;
+}
+#header-logo{
+    width: 30%;
+    color: white;
+}
+#speaker {
+    width: 21%;
+    position: relative;
+    top: 97px;
+    left: 90px;
+}
+#header-content h4{
+    color: white;
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+#header-content p{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Principal section with cards */
+/* Article big card */
+#section-main-cards{
+    padding: 64px 0;
+    position: relative;
+    z-index: 2;
+}
+#main-big-card{
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 64px;
+}
+#big-card-image{
+    background: url(./imgs/nrf2020vision.jpg);
+    background-size: cover;
+    background-position: 0px -60px;
+    background-repeat: no-repeat;
+    height: 450px;
+}
+#big-card-texts{
+    margin-top: 20px;
+}
+#big-card-texts h2{
+    color: #231f20;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+#big-card-texts p{
+    color: #74787a;
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+#big-card-texts cite, #sub-card-texts cite{
+    color: #b2b2b2;
+    font-size: 18px;
+}
+#big-card-texts hr{
+    margin-top: 18px;
+    width: 43%;
+    background: linear-gradient(to right, #E52359, #6A5BA3);
+    border: none;
+    height: 5px;
+}
+#section-main-cards a{
+    transition: 0.3s;
+    display: block;
+}
+/* Article medium size cards */
+#main-sub-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#main-sub-cards a{
+    width: 43%;
+}
+.sub-card{
+    width: 100%;
+    height: fit-content;
+}
+.sub-card-image{
+    height: 350px;
+}
+/* Image cards */
+.image-card01 {
+    background: url(./imgs/makekobeNBA.png);
+    background-color: #1e53a3;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.image-card02{
+    background: url(./imgs/whatsapp.png);
+    background-size: 80%;
+    background-color: #26d366;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#sub-card-texts{
+    margin-top: 20px;
+}
+#sub-card-texts h2{
+    color: #231f20;
+    font-size: 32px;
+    margin-bottom: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* HR line inside medium size cards */
+#hr-card01{
+    margin-top: 18px;
+    width: 60%;
+    background: linear-gradient(to right, #76C6CF, #6760A6);
+    border: none;
+    height: 5px;
+}
+#hr-card02{
+    margin-top: 18px;
+    width: 60%;
+    background: linear-gradient(to right, #76C6CF, #3AB38A);
+    border: none;
+    height: 5px;
+}
+
+/* Section banner with texts before footer */
+#section-banner-footer{
+    background-color: #FC4C02;
+    padding: 48px 0;
+}
+#section-logo {
+    width: fit-content;
+    margin: 0 auto;
+}
+#logo-mandarin{
+    width: 350px;
+}
+
+/* Footer */
+footer{
+    background-color: #F2F2F2;
+    text-align: center;
+    padding: 32px;
+    color: 646869;
+}
+footer a{
+    text-decoration: underline;
+}
+
+/* Responsivity */
+/* Breakpoint 1440px*/
+@media screen and (max-width: 1440px){
+    #big-card-image{
+        background-position: center;
+    }
+    #speaker {
+        left: 0px;
+    }
+    #main-sub-cards a {
+        width: 48%;
+    }
+}
+/* Breakpoint 1024px with adjustments of margin page, image display from header and width from hyperlinks of medium cards*/
+@media screen and (max-width: 1024px){
+    .wrapper{
+        width: 80%;
+    }
+    #header-logo {
+        width: 40%;
+    }
+    #speaker{
+        display: none;
+    }
+
+}
+/* Breakpoint 768px with adjustments of width from cards, cards align and font-sizes */
+@media screen and (max-width: 768px){
+    
+    #header-texts{
+        width: 40%;
+    }
+    #wave-vector{
+        width: 80%;
+    }
+    #header-content{
+        justify-content: space-evenly;
+    }
+    #header-content h4 {
+        font-size: 22px;
+    }
+    #header-content p {
+        font-size: 18px;
+    }
+    #big-card-texts hr{
+        margin-top: 18px;
+        width: 60%;
+        background: linear-gradient(to right, #E52359, #6A5BA3);
+        border: none;
+        height: 5px;
+    }
+    #main-sub-cards{
+        justify-content: center;
+    }
+    #main-sub-cards a {
+        width: 100%;
+        margin-bottom: 64px;
+    }
+    #section-texts{
+        width: 330px;
+    }
+}
+/* Breakpoint 425px with adjustments of header align in center and font-sizes */
+@media screen and (max-width: 425px){
+    header{
+        height: 300px;
+    }
+    #header-logo {
+        width: 80%;
+    }
+    #header-content {
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
+        height: 300px;
+    }
+    #header-texts{
+        width: 100%;
+        text-align: center;
+    }
+    #header-content h4 {
+        font-size: 18px;
+    }
+    #header-content p {
+        font-size: 16px;
+    }
+    #big-card-texts h2{
+        font-size: 28px;
+    }
+    #big-card-texts p{
+        font-size: 18px;
+    }
+    #sub-card-texts h2{
+        font-size: 26px;
+    }
+    #section-texts{
+        width: 280px;
+    }
+    #logo-mandarin{
+        width: 250px;
+    }
+}
